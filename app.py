@@ -15,8 +15,8 @@ from dotenv import load_dotenv
 # load environment variables:
 load_dotenv()
 
-st.header("Mapa Nacional Bullyng V1.0")
-pdf_obj = st.file_uploader("Cargar PDF", type=["pdf"])
+st.header("Destino Oceania Chat V1.0")
+pdf_obj = st.file_uploader("Upload PDF", type=["pdf"])
 
 
 def create_embeddings(pdf):
@@ -43,7 +43,7 @@ def create_embeddings(pdf):
 
 if pdf_obj:
     knowledge_base = create_embeddings(pdf_obj)
-    user_question = st.text_input("Realiza tu consulta acá:")
+    user_question = st.text_input("Realiza tu pregunta a Destino Oceania acá:")
 
     if user_question:
         docs = knowledge_base.similarity_search(user_question, 3)
