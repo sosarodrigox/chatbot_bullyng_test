@@ -5,3 +5,4 @@ langchain
 sentence-transformers
 faiss-cpu
 python-dotenv
+langchain-community
